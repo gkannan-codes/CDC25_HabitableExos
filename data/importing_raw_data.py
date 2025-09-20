@@ -9,3 +9,11 @@ df = pd.read_csv(url)                                      # loads directly from
 df.to_csv("nasa_exoplanets_raw_data.csv", index=False)     # saves the dataframe to a local CSV file
 
 print(df.head())                                           # prints the first few rows of the dataframe
+
+import pyvo
+svc = pyvo.dal.TAPService("https://exoplanetarchive.ipac.caltech.edu/TAP")
+job = svc.submit_job("select * from pscomppars")
+job.run()                     # waits for completion
+tbl = job.fetch_result()      # VOTable -> astropy Table
+df = tbl.to_table().to_pandas()
+df.to_csv("nasa_exoplanets_raw_data.csv", index=False)
