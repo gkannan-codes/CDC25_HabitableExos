@@ -26,8 +26,6 @@ We operationalize this by extracting five key planet/star characteristics from N
 
 > We prefilter to rows with these fields present, and we standardize/normalize to support scoring.
 
-*This research has made use of the NASA Exoplanet Archive, which is operated by the California Institute of Technology, under contract with the National Aeronautics and Space Administration under the Exoplanet Exploration Program.*
-
 **Programmatic download (reproducible):**
 ```python
 import pandas as pd, urllib.parse as up
@@ -37,3 +35,6 @@ from pscomppars
 """
 url = "https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=" + up.quote_plus(sql) + "&format=csv"
 df = pd.read_csv(url)
+
+## Credit
+*This research has made use of the NASA Exoplanet Archive, which is operated by the California Institute of Technology, under contract with the National Aeronautics and Space Administration under the Exoplanet Exploration Program.*
