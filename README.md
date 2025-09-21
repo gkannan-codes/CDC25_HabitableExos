@@ -1,21 +1,19 @@
-# ExoHabit — Scoring Exoplanets for Human-Centric Habitability
-
-*A data-challenge project that uses NASA’s Exoplanet Archive to identify planets most likely to support human life (or human-built life-support systems) in the very long term.*
+# ExoHabit — Scoring Exoplanets for Habitability
 
 ---
 
 ## Why this project
 
-Modern Earth is trending toward reduced habitability due to rising heat, sea-level rise, freshwater stress, biodiversity loss, and other pressures. Framing this urgency, Earth-system science tracks **nine planetary boundaries** (life-support processes); multiple are already **transgressed**. Our project quantifies a simple “Earth stress” story and then asks a pragmatic question:
+Earth is trending toward reduced habitability due to rising heat, sea-level rise, freshwater stress, biodiversity loss, and other pressures. Moreover, scientists have been actively researching possible extraterrestrial life since the 1950s. Our project quantifies this concern and research by proposing an important question:
 
-> **Given what keeps humans alive on Earth, which known exoplanets look most promising if we ever had to live beyond Earth?**
+> **If we ever had to live beyond Earth, which known exoplanets would be the best places to live in?**
 
-We operationalize this by extracting five key planet/star characteristics from NASA’s Exoplanet Archive, normalizing them to **Earth-relative units**, and building a transparent scoring function on \[0, 1\] where **1 ≈ Earth-like**.
+We address this question by extracting 5 key planet/star characteristics from the NASA Exoplanet Archive, normalizing them to Earth-relative units, and building a scoring function where 1 ≈ Earth-like.
 
 ---
 ## Data
 
-- **Source:** NASA Exoplanet Archive — `pscomppars` table (confirmed exoplanets with derived/combined parameters).
+- **Source:** NASA Exoplanet Archive.
 - **Core columns used (Earth-relative where possible):**
   - `pl_insol` — **Insolation Flux** (Earth = 1)
   - `pl_rade` — **Planet Radius** (Earth radii)
@@ -23,9 +21,9 @@ We operationalize this by extracting five key planet/star characteristics from N
   - `pl_bmasse` — **Planet Mass** (Earth masses)
   - `pl_eqt` — **Equilibrium Temperature** (K)
 
-> We prefilter to rows with these fields present, and we standardize/normalize to support scoring.
+> We prefilter to rows with these fields present, and we normalize to support scoring.
 
-**Programmatic download (reproducible):**
+**Programmatic download:**
 ```python
 import pandas as pd, urllib.parse as up
 sql = """
