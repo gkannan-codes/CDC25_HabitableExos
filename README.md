@@ -4,7 +4,7 @@
 
 ## Why this project
 
-Earth is trending toward reduced habitability due to rising heat, sea-level rise, freshwater stress, biodiversity loss, and other pressures. Moreover, scientists have been actively researching possible extraterrestrial life since the 1950s. Our project quantifies this concern and research by proposing an important question:
+Earth is trending toward reduced habitability due to rising heat, sea-level rise, freshwater stress, biodiversity loss, and other pressures. Moreover, scientists have been actively researching possible extraterrestrial life since the 1950s. Our project quantifies this by proposing this question:
 
 > **If we ever had to live beyond Earth, which known exoplanets would be the best places to live in?**
 
