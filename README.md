@@ -14,7 +14,7 @@ We address this question by extracting 5 key planet/star characteristics from th
 ## Data
 
 - **Source:** NASA Exoplanet Archive.
-- **Core columns used (Earth-relative where possible):**
+- **Core columns used:**
   - `pl_insol` — **Insolation Flux** (Earth = 1)
   - `pl_rade` — **Planet Radius** (Earth radii)
   - `pl_orbsmax` — **Orbital Distance / Semi-major Axis** (AU)
