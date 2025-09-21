@@ -1,4 +1,4 @@
-# ExoHabit — Scoring Exoplanets for Habitability
+# HabitableExos — Scoring Exoplanets for Habitability
 
 ---
 
